@@ -7,3 +7,4 @@ else:
 
 print(tuple)
 print(f"First 4th: {tuple[3]} and last 4th: {tuple[-4]}")
+
