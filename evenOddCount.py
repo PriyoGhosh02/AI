@@ -15,4 +15,3 @@ for num in numbers:
         
 print(f"Even Numbers: {list_even} and Odd Numbers: {list_odd}")
 print(f"Total Even Numbers: {c_even} and Total Odd Numbers: {c_odd}")
-print("hello world")
