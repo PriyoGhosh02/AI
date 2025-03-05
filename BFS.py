@@ -1,26 +1,25 @@
-BFSgraph = {
-    'A': ['S', 'D'],
-    'B': ['S', 'E'],
-    'C': ['S', 'F'],
-    'D': ['A', 'G'],
-    'E': ['B', 'G'],
-    'F': ['C', 'G'],
-    'G': ['D', 'E', 'F'],
-    'S': ['A', 'B', 'C']
+graph = {
+    "A": ["B", "C"],
+    "B": ["D", "E"],
+    "C": ["F", "G"],
+    "D": [],
+    "E": ["H"],
+    "F": ["K"],
+    "G": [],
+    "H": [],
+    "K": [],
 }
+
 
 def bfs(graph, src):
     visited = []
     queue = [src]
-
     while queue:
         node = queue.pop(0)
         if node not in visited:
             visited.append(node)
-            childs = graph[node]
+            queue.extend(graph[node])
+    return visited
 
-            for child in childs:
-                queue.append(child)
-    return visited  
 
-print(bfs(BFSgraph, 'A'))
+print(f"BFS:{bfs(graph, 'A')}")
