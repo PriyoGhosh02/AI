@@ -32,7 +32,7 @@
 
 # print(f"IDFS: {idfs(graph, 'A', 3)}")
 
-def get_graph():
+def graph():
     graph = {}
     nodes = int(input("Enter number of nodes: "))
 
@@ -43,7 +43,7 @@ def get_graph():
 
     return graph
 
-graph = get_graph()
+graph = graph()
 
 def idfs(graph, src, depth):
     visited = []
